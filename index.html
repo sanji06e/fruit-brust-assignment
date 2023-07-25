@@ -4,6 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Burst</title>
+    <link rel="icon" href="images/logo.png" />
+    <!-- daisyUI and tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS styles -->
+    <style>
+      * {
+        font-family: "Lato", sans-serif;
+      }
+      input {
+        background: url("./images/search.png") no-repeat;
+        background-size: 24px;
+        background-position: 95%;
+        padding: 12px 20px 12px 40px;
+      }
+      @media screen and (max-width: 576px) {
+        .mobile {
+          width: 100%;
+        }
+      }
+    </style>
+    <!-- custom tailwind color -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "primary-color": "#F85559",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body></body>
+  <body>
+    <header class="container mx-auto">
+      <!-- nav bar -->
+      <nav class="lg:my-16">
+        <div
+          class="navbar justify-center lg:bg-primary-color lg:rounded-[600px] p-4"
+        >
+          <div class="navbar-start hidden lg:flex">
+            <ul
+              class="menu menu-horizontal px-1 text-white text-lg font-medium"
+            >
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+          <div
+            class="mobile navbar-center justify-between flex-row-reverse items-center md:gap-96 lg:gap-0"
+          >
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-20"
+              >
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All Fruits</a></li>
+              </ul>
+            </div>
+            <div class="flex">
+              <img src="images/logo.png" class="w-10" alt="" />
+              <a class="btn btn-ghost normal-case text-4xl lg:text-white"
+                >Fruit Burst</a
+              >
+            </div>
+          </div>
+
+          <div class="navbar-end hidden lg:flex">
+            <input
+              type="text"
+              placeholder="Search"
+              class="input input-bordered w-24 md:w-auto rounded-3xl"
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>
