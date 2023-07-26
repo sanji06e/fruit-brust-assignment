@@ -26,7 +26,7 @@
         margin: 0;
         padding: 0;
       }
-      input {
+      .search-box {
         background: url("./images/search.png") no-repeat;
         background-size: 24px;
         background-position: 95%;
@@ -47,6 +47,7 @@
             colors: {
               clifford: "#da373d",
               "primary-color": "#F85559",
+              "primary-text": "#656161",
             },
           },
         },
@@ -117,7 +118,7 @@
             <input
               type="text"
               placeholder="Search"
-              class="bg-white px-5 py-3 input input-bordered w-72 rounded-3xl"
+              class="bg-white px-5 py-3 input input-bordered w-72 rounded-3xl search-box"
             />
           </div>
         </div>
@@ -131,7 +132,7 @@
               class="hero lg:min-h-[70vh] md:min-h-[80vh] rounded-xl"
               style="background-image: url(./images/banner1.png)"
             >
-              <div class="hero-overlay bg-opacity-60 rounded-xl"></div>
+              <div class="hero-overlay bg-opacity-50 rounded-xl"></div>
               <div class="hero-content text-center text-neutral-content">
                 <div class="lg:max-w-2xl max-w-sm text-white space-y-5">
                   <h1
@@ -143,7 +144,7 @@
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="btn bg-primary-color text-white border-none lg:text-lg font-extrabold"
+                    class="btn bg-primary-color text-white border-none lg:text-lg md:font-extrabold"
                   >
                     Shop Now
                   </button>
@@ -175,7 +176,7 @@
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="btn bg-primary-color text-white border-none lg:text-lg font-extrabold"
+                    class="btn bg-primary-color text-white border-none lg:text-lg md:font-extrabold"
                   >
                     Shop Now
                   </button>
@@ -207,7 +208,7 @@
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="btn bg-primary-color text-white border-none lg:text-lg font-extrabold"
+                    class="btn bg-primary-color text-white border-none lg:text-lg md:font-extrabold"
                   >
                     Shop Now
                   </button>
@@ -239,7 +240,7 @@
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="btn bg-primary-color text-white border-none lg:text-lg font-extrabold"
+                    class="btn bg-primary-color text-white border-none lg:text-lg md:font-extrabold"
                   >
                     Shop Now
                   </button>
@@ -291,7 +292,161 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main class="container mx-auto">
+      <!-- Deal of the day section -->
+      <section>
+        <!-- text and countdown section -->
+        <div
+          class="flex flex-col md:flex-row md:justify-between justify-center items-center my-5 px-5"
+        >
+          <div class="space-y-6 max-w-2xl text-center md:text-left">
+            <h2 class="text-3xl lg:text-5xl text-[#121212] font-extrabold">
+              Deal of the day
+            </h2>
+            <p class="leading-6">
+              Contrary to popular belief, is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old.
+            </p>
+          </div>
+          <div class="grid grid-flow-col gap-5 text-center auto-cols-max my-6">
+            <div class="flex flex-col font-semibold">
+              <span
+                class="countdown font-mono text-3xl md:text-5xl font-extrabold"
+              >
+                <span style="--value: 29"></span>
+              </span>
+              days
+            </div>
+            <div class="flex flex-col font-semibold">
+              <span
+                class="countdown font-mono text-3xl md:text-5xl font-extrabold"
+              >
+                <span style="--value: 15"></span>
+              </span>
+              hours
+            </div>
+            <div class="flex flex-col font-semibold">
+              <span
+                class="countdown font-mono text-3xl md:text-5xl font-extrabold"
+              >
+                <span style="--value: 25"></span>
+              </span>
+              min
+            </div>
+            <div class="flex flex-col font-semibold">
+              <span
+                class="countdown font-mono text-3xl md:text-5xl font-extrabold"
+              >
+                <span style="--value: 08"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+        <!-- ratings and modal section -->
+        <div class="card w-96 bg-base-100 border border-grey-300 p-9">
+          <figure>
+            <img src="images/fruit6.png" alt="Shoes" class="w-36" />
+          </figure>
+          <div class="card-body space-y-4">
+            <h3 class="text-2xl font-bold text-center">12.90$ - 18.85$</h3>
+            <hr />
+            <p class="text-sm font-semibold text-primary-text text-center">
+              Apples
+            </p>
+            <!-- rating -->
+            <div class="rating justify-center">
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-primary-color"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-primary-color"
+                checked
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-primary-color"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-primary-color"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-primary-color"
+              />
+            </div>
+            <!-- modal -->
+            <!-- Open the modal using ID.showModal() method -->
+            <p
+              class="text-center text-primary-color"
+              onclick="my_modal_1.showModal()"
+            >
+              details
+            </p>
+            <dialog id="my_modal_1" class="modal">
+              <div class="text-center">
+                <form method="dialog" class="modal-box max-w-lg">
+                  <img src="images/fruit6.png" alt="" class="ml-[37%]" />
+                  <h3 class="font-bold text-lg mt-5">Apples</h3>
+                  <p class="py-4">
+                    Professional employees are there for you to pick the most
+                    amazing and fresh fruits.
+                  </p>
+                  <div class="rating justify-center">
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-primary-color"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-primary-color"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-primary-color"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-primary-color"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      class="mask mask-star-2 bg-primary-color"
+                    />
+                  </div>
+                  <div class="modal-action gap-5 justify-center">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button
+                      class="btn btn-outline border-primary-color text-primary-color"
+                    >
+                      Close
+                    </button>
+                    <button class="btn bg-primary-color text-white">
+                      Buy Now
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </dialog>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
